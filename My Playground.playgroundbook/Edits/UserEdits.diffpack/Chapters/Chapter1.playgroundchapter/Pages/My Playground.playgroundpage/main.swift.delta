@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>struct Employee {
+    var empName:String
+    var empID:Int
+    var empSalary:Double
+    
+    func salaryAfterDeduction()-&gt;Double{
+        return self.empSalary*0.65;
+    }
+    
+}
+
+var employee=Employee(empName:"Aziz Fellah",empID: 34567,empSalary: 100000)
+
+print("Employee Details: ")
+print("ID = \(employee.empID)")
+print("Name = \(employee.empName)")
+print("Salary = \(employee.empSalary)")
+
+
+print("The salary after tax deduction is : \(employee.salaryAfterDeduction())")
+print("********************************")
+
+struct Course {
+    var courseName="iOS"
+    var semester="Fall"
+    var numberOfStudents=70
+    
+    func printCourseDetails(){
+        print("Course Name: \(courseName) \nSemester: \(semester) \nNumber of Students:  \(numberOfStudents)")
+    }
+}
+var course=Course()
+print(course.courseName+" - " + course.semester)
+course.printCourseDetails()
+var emp1=employee
+emp1.empName="Charles Badami"
+print(employee.empName+"    "+emp1.empName)
+
+struct Celsius {
+    var temperatureInCelsius: Double
+    init(fromFahrenheit fahrenheit: Double) {
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+    }
+    init(fromKelvin kelvin: Double) {
+        temperatureInCelsius = kelvin - 273.15
+    }
+    init(_ celsius: Double) {
+        temperatureInCelsius = celsius
+    }
+}
+let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
+print(boilingPointOfWater.temperatureInCelsius)
+let freezingPointOfWater = Celsius(fromKelvin: 273.15)
+print(freezingPointOfWater.temperatureInCelsius)
+let bodyTemperature = Celsius(37.0)
+print(bodyTemperature.temperatureInCelsius)
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1576}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
